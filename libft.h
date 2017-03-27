@@ -6,5 +6,6 @@
 # include <string.h>
 
 void			*ft_memset(void *b, int c, size_t len);
+void			ft_bzero(void *str, size_t n);
 
 #endif
