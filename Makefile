@@ -1,7 +1,9 @@
 NAME = libft.a
 
 SRCS =	ft_memset.c \
-	ft_bzero.c
+	ft_bzero.c \
+	ft_memcpy.c \
+	#new#
 
 OBJS = $(SRCS:.c=.o)
 
