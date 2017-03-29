@@ -10,16 +10,16 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(OBJS): %.o: %.c
-	@gcc -Wall -Wextra -Werror -c $< -o $@
+	gcc -Wall -Wextra -Werror -c $< -o $@
 
 $(NAME): $(OBJS)
-	@ar rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
-	@rm -f $(OBJS)
+	rm -f $(OBJS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
