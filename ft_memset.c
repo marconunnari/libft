@@ -5,6 +5,8 @@ void	*ft_memset(void *str, int c, size_t n)
 	unsigned int	i;
 	unsigned char	*ptr;
 
+	if(str == NULL)
+		return NULL;
 	i = 0;
 	ptr = (unsigned char *)str;
 	while(ptr[i] && i < n)
