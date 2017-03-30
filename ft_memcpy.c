@@ -13,7 +13,7 @@ void			*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	source = (char*) src;
 	destination = (char*) dest;
-	while(source[i] && i < n)
+	while(i < n)
 	{
 		destination[i] = source[i];
 		i++;
