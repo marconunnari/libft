@@ -7,8 +7,6 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	unsigned int	i;
 	int		cfound;
 
-	if (dest == NULL || src == NULL)
-		return (NULL);
 	i = 0;
 	cfound = 0;
 	destination = (unsigned char*) dest;
