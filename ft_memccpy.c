@@ -2,8 +2,8 @@
 
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char		*destination;
-	char		*source;
+	unsigned char	*destination;
+	unsigned char	*source;
 	unsigned int	i;
 	int		cfound;
 
@@ -11,8 +11,8 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 		return (NULL);
 	i = 0;
 	cfound = 0;
-	destination = (char*) dest;
-	source = (char*) src;
+	destination = (unsigned char*) dest;
+	source = (unsigned char*) src;
 	while (i < n && !cfound)
 	{
 		if (source[i] == c)
