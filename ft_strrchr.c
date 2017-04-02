@@ -1,0 +1,17 @@
+#include "libft.h"
+
+char		*ft_strrchr(const char *s, int c)
+{
+	char		*str;
+	int		i;
+
+	str = ft_strdup(s);
+	i = ft_strlen(str);
+	while(i >= 0)
+	{
+		if (str[i] == c)
+			return (&str[i]);
+		i--;
+	}
+	return (NULL);
+}
