@@ -20,6 +20,7 @@ SRCS =	ft_memset.c \
 	ft_strnstr.c \
 	ft_strcmp.c \
 	ft_strncmp.c \
+	ft_atoi.c \
 	#new#
 
 OBJS = $(SRCS:.c=.o)
