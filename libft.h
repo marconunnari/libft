@@ -29,6 +29,8 @@ int			ft_atoi(const char *nptr);
 int			ft_islower(int c);
 int			ft_isupper(int c);
 int			ft_isalpha(int c);
+int			ft_isdigit(int c);
+int			ft_isalnum(int c);
 /*new*/
 
 #endif

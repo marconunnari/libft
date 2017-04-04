@@ -24,6 +24,8 @@ SRCS =	ft_memset.c \
 	ft_islower.c \
 	ft_isupper.c \
 	ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
 	#new#
 
 OBJS = $(SRCS:.c=.o)
