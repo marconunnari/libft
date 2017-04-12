@@ -1,4 +1,5 @@
 NAME = libft.a
+DIR_OBJS = objs
 
 SRCS =	ft_memset.c \
 	ft_bzero.c \
@@ -32,11 +33,11 @@ SRCS =	ft_memset.c \
 	ft_tolower.c \
 	#new#
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
 
 all: $(NAME)
 
-$(OBJS): %.o: %.c
+$(DIR_OBJS)/%.o: %.c
 	gcc -Wall -Wextra -Werror -c $< -o $@
 
 $(NAME): $(OBJS)
