@@ -7,7 +7,7 @@ static void	get_sign(const char *str, int *i, int *sign)
 		*sign = -1;
 		*i += 1;
 	}
-	if (str[*i] == '+')
+	else if (str[*i] == '+')
 	{
 		*sign = +1;
 		*i += 1;

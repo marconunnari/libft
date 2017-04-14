@@ -2,19 +2,17 @@
 
 char		*ft_strchr(const char *s, int c)
 {
-	char		*str;
 	size_t		i;
 
-	str = ft_strdup(s);
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (s[i] == c)
+			return ((char *)(s + i));
 		i++;
 	}
 	if (c == '\0')
-		return (&str[i]);
+		return ((char *)(s + i));
 	else
 		return NULL;
 }
