@@ -38,6 +38,7 @@ OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
 all: $(NAME)
 
 $(DIR_OBJS)/%.o: %.c
+	mkdir -p $(DIR_OBJS)
 	gcc -Wall -Wextra -Werror -c $< -o $@
 
 $(NAME): $(OBJS)

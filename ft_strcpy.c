@@ -2,6 +2,14 @@
 
 char		*ft_strcpy(char *dest, const char *src)
 {
-	ft_memcpy(dest, src, strlen(src) + 1);
+	unsigned int	i;
+
+	i = 0;
+	while(src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = src[i];
 	return (dest);
 }
