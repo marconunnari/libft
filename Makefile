@@ -34,6 +34,7 @@ SRCS =	ft_memset.c \
 	ft_memalloc.c \
 	ft_memdel.c \
 	ft_strnew.c \
+	ft_strdel.c \
 	#new#
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
