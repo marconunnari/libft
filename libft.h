@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 19:38:09 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 21:58:12 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char			*ft_strnew(size_t size);
 void			ft_strdel(char**as);
 void			ft_strclr(char*s);
 void			ft_striter(char* s, void(*f) (char*));
+void			ft_striteri(char*s,void(*f)(unsigned int, char*));
 /*new*/
 
 #endif
