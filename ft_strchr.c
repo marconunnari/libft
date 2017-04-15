@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:15 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:06:15 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 11:41:32 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ char		*ft_strchr(const char *s, int c)
 	if (c == '\0')
 		return ((char *)(s + i));
 	else
-		return NULL;
+		return (NULL);
 }

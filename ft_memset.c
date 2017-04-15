@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:15 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:06:15 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 11:33:52 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ void	*ft_memset(void *str, int c, size_t n)
 
 	i = 0;
 	ptr = (unsigned char *)str;
-	while(i < n)
+	while (i < n)
 	{
-		ptr[i] = (unsigned char) c;
+		ptr[i] = (unsigned char)c;
 		i++;
 	}
 	return (str);

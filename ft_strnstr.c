@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:17 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:06:17 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 13:45:40 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,37 +14,18 @@
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char		*rick;
-	char		*res;
-	size_t		i;
-	int		j;
+	char	*nbig;
 
-	rick = ft_strdup(big);
-	if (little[0] == '\0')
-		return (rick);
-	res = NULL;
-	i = 0;
-	j = 0;
-	while (rick[i] != '\0' && i < len)
+	if (len < ft_strlen(big))
 	{
-		if (rick[i] == little[j])
-		{
-			if (res == NULL)
-				res = &rick[i];
-			j++;
-		}
+		nbig = (char*)malloc(len + 1);
+		nbig = ft_strncpy(nbig, big, len);
+		nbig[len] = '\0';
+		if ((nbig = ft_strstr(nbig, little)))
+			return (ft_strstr(big, nbig));
 		else
-		{
-			if (little[j] == '\0')
-				return (res);
-			res = NULL;
-			j = 0;
-		}
-		i++;
+			return (NULL);
 	}
-	if (little[j] != '\0')
-		return (NULL);
-	return (res);
-
-
+	else
+		return (ft_strstr(big, little));
 }

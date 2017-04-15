@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:13 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:06:13 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 11:28:12 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	get_sign(const char *str, int *i, int *sign)
 	}
 }
 
-int		ft_atoi(const char *nptr)
+int			ft_atoi(const char *nptr)
 {
 	int	res;
 	int	sign;

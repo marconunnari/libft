@@ -6,43 +6,30 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:17 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:06:17 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/15 13:31:29 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strstr(const char *haystack, const char *needle)
+static char		*ft_strstr_w(const char *haystack,
+		const char *needle, const char *needlestart)
 {
-	char		*rick;
-	char		*res;
-	int		i;
-	int		j;
-
-	rick = ft_strdup(haystack);
-	if (needle[0] == '\0')
-		return (rick);
-	res = NULL;
-	i = 0;
-	j = 0;
-	while (rick[i] != '\0')
-	{
-		if (rick[i] == needle[j])
-		{
-			if (res == NULL)
-				res = &rick[i];
-			j++;
-		}
-		else
-		{
-			if (needle[j] == '\0')
-				return (res);
-			res = NULL;
-			j = 0;
-		}
-		i++;
-	}
-	if (needle[j] != '\0')
+	if (*needle == 0)
+		return ((char*)haystack);
+	if (*haystack == 0)
 		return (NULL);
-	return (res);
+	if (*haystack == *needle)
+		if (ft_strstr_w(haystack + 1, needle + 1, needlestart)
+				== haystack + 1)
+			return ((char*)haystack);
+	if (needle == needlestart)
+		return (ft_strstr_w(haystack + 1, needle, needlestart));
+	else
+		return (NULL);
+}
+
+char			*ft_strstr(const char *haystack, const char *needle)
+{
+	return (ft_strstr_w(haystack, needle, needle));
 }
