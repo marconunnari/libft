@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/16 17:21:43 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/16 20:03:57 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,11 @@ char			*ft_strsub(char const *s,unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1,char const *s2);
 char			*ft_strtrim(char const *s);
 char			*ft_strrev(char *str);
+char			**ft_strsplit(char const *s,char c);
+char			*ft_strftrim(const char *str, int(*f)(int c));
+int				ft_iswhitespace(int c);
+char			*ft_strctrim(const char *s, int c);
+char			*ft_strcmpr(const char *s, char c);
 /*new*/
 
 #endif
