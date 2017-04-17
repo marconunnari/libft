@@ -6,13 +6,13 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:37 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:37 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 19:11:39 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strftrim(const char *s, int(*f)(int c))
+char		*ft_strftrim(const char *s, int (*f)(int c))
 {
 	char	*res;
 	int		i;

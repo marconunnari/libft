@@ -6,13 +6,13 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:42 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:42 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 19:08:21 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strmap(char const *s,char(*f)(char))
+char		*ft_strmap(char const *s, char (*f)(char))
 {
 	char			*res;
 	unsigned int	i;

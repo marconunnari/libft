@@ -6,13 +6,13 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:29 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:29 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 19:12:44 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			ft_strclr(char* s)
+void			ft_strclr(char *s)
 {
 	if (s)
 		while (*s)

@@ -6,14 +6,14 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:37 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:37 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 19:12:10 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int		ft_strequ(char const *s1,char const *s2)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	if (ft_strcmp(s1, s2) == 0)
 		return (1);

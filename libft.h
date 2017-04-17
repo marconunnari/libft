@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 13:25:03 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 19:06:42 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,17 +52,17 @@ void			ft_memdel(void **ap);
 char			*ft_strnew(size_t size);
 void			ft_strdel(char**as);
 void			ft_strclr(char*s);
-void			ft_striter(char* s, void(*f) (char*));
-void			ft_striteri(char*s,void(*f)(unsigned int, char*));
-char			*ft_strmap(char const *s,char(*f)(char));
+void			ft_striter(char *s, void (*f)(char*));
+void			ft_striteri(char*s, void(*f)(unsigned int, char*));
+char			*ft_strmap(char const *s, char(*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int				ft_strequ(char const *s1,char const *s2);
-int				ft_strnequ(char const *s1,char const *s2, size_t n);
-char			*ft_strsub(char const *s,unsigned int start, size_t len);
-char			*ft_strjoin(char const *s1,char const *s2);
+int				ft_strequ(char const *s1, char const *s2);
+int				ft_strnequ(char const *s1, char const *s2, size_t n);
+char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			*ft_strrev(char *str);
-char			**ft_strsplit(char const *s,char c);
+char			**ft_strsplit(char const *s, char c);
 char			*ft_strftrim(const char *str, int(*f)(int c));
 int				ft_iswhitespace(int c);
 char			*ft_strctrim(const char *s, int c);
@@ -72,10 +72,10 @@ void			ft_putchar(char c);
 void			ft_putstr(char const *s);
 void			ft_putendl(char const*s);
 void			ft_putnbr(int n);
-void			ft_putchar_fd(char c,int fd);
-void			ft_putstr_fd(char const *s,int fd);
-void			ft_putendl_fd(char const *s,int fd);
-void			ft_putnbr_fd(int n,int fd);
+void			ft_putchar_fd(char c, int fd);
+void			ft_putstr_fd(char const *s, int fd);
+void			ft_putendl_fd(char const *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
 /*new*/
 
 #endif
