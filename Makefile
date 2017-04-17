@@ -56,6 +56,8 @@ SRCS =	ft_memset.c \
 	ft_putstr.c \
 	ft_putendl.c \
 	ft_putnbr.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
 	#new#
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
