@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/16 20:03:57 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/17 13:25:03 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,10 @@ int				ft_iswhitespace(int c);
 char			*ft_strctrim(const char *s, int c);
 char			*ft_strcmpr(const char *s, char c);
 char			*ft_itoa(int n);
+void			ft_putchar(char c);
+void			ft_putstr(char const *s);
+void			ft_putendl(char const*s);
+void			ft_putnbr(int n);
 /*new*/
 
 #endif
