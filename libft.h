@@ -67,6 +67,7 @@ char			*ft_strftrim(const char *str, int(*f)(int c));
 int				ft_iswhitespace(int c);
 char			*ft_strctrim(const char *s, int c);
 char			*ft_strcmpr(const char *s, char c);
+char			*ft_itoa(int n);
 /*new*/
 
 #endif
