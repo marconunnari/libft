@@ -6,21 +6,21 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:51 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:51 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/18 17:54:48 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		size(const char *s, char c)
+static size_t		words(const char *s, char c)
 {
-	size_t		size;
+	size_t		words;
 
-	size = 1;
+	words = 1;
 	while (*s)
 		if (*s++ == c)
-			size = size + 1;
-	return (size);
+			words = words + 1;
+	return (words);
 }
 
 char				**ft_strsplit(char const *s, char c)
@@ -33,7 +33,7 @@ char				**ft_strsplit(char const *s, char c)
 	ptr1 = ft_strctrim(s, c);
 	ptr1 = ft_strcmpr(ptr1, c);
 	ptr2 = ptr1;
-	res = (char**)malloc(sizeof(char*) * size(s, c) + 1);
+	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
 	if (!res)
 		return (NULL);
 	resptr = res;
@@ -46,7 +46,8 @@ char				**ft_strsplit(char const *s, char c)
 		}
 		ptr2++;
 	}
-	*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
+	if (ptr2 > ptr1)
+		*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
 	*resptr = 0;
 	return (res);
 }
