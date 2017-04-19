@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:37 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 19:11:39 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 12:32:07 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@ char		*ft_strftrim(const char *s, int (*f)(int c))
 		res[j - i] = s[j];
 		j--;
 	}
+	res = ft_strdup(res);
 	return (res);
 }

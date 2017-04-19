@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:17 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 18:59:17 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 12:33:59 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char				*ft_itoa(int n)
 	size_t		size;
 
 	size = getsize(n);
-	res = ft_strnew(size + 1);
+	res = ft_strnew(size + 2);
 	if (!res)
 		return (NULL);
 	sign = n < 0 ? "-" : "";
