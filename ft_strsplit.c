@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:51 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/19 12:24:57 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 18:45:28 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,41 +23,39 @@ static size_t		words(const char *s, char c)
 	return (words);
 }
 
-static char			*normalize(char *ptr1, const char *s, char c)
+static void			loop(char *ptr1, char **res, char c)
 {
-	IFRETURN(!s, NULL);
-	ptr1 = ft_strctrim(s, c);
-	IFRETURN(!ptr1, NULL);
-	ptr1 = ft_strcmpr(ptr1, c);
-	IFRETURN(!ptr1, NULL);
-	return (ptr1);
-}
-
-char				**ft_strsplit(char const *s, char c)
-{
-	char		**res;
-	char		**resptr;
-	char		*ptr1;
 	char		*ptr2;
+	char		**resptr;
 
-	ptr1 = NULL;
-	ptr1 = normalize(ptr1, s, c);
-	IFRETURN(!ptr1, NULL);
 	ptr2 = ptr1;
-	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
-	IFRETURN(!res, NULL);
 	resptr = res;
 	while (*ptr2)
 	{
 		if (*ptr2 == c)
 		{
 			*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
-			ptr1 = ptr2 + 1;
+			while (*ptr2 == c)
+				ptr2++;
+			ptr1 = ptr2;
 		}
 		ptr2++;
 	}
 	if (ptr2 > ptr1)
 		*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
 	*resptr = 0;
+}
+
+char				**ft_strsplit(char const *s, char c)
+{
+	char		**res;
+	char		*ptr1;
+
+	IFRETURN(!s, NULL);
+	ptr1 = ft_strctrim(s, c);
+	IFRETURN(!ptr1, NULL);
+	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
+	IFRETURN(!res, NULL);
+	loop(ptr1, res, c);
 	return (res);
 }
