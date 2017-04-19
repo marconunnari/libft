@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:35 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 19:12:20 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 11:05:58 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		ft_strdel(char **as)
 	char	*str;
 	int		i;
 
-	if (*as == NULL)
+	if (as == NULL || *as == NULL)
 		return ;
 	i = 0;
 	str = *as;

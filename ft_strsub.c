@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:53 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/17 19:07:19 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 11:08:27 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strsub(char const *s, unsigned int start, size_t len)
 	unsigned int		i;
 
 	res = (char*)malloc(len + 1);
-	if (!res)
+	if (!res || !s)
 		return (NULL);
 	i = 0;
 	while (s[i + start] && i < len)

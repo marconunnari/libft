@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:51 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/18 17:54:48 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 12:24:57 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ static size_t		words(const char *s, char c)
 	return (words);
 }
 
+static char			*normalize(char *ptr1, const char *s, char c)
+{
+	IFRETURN(!s, NULL);
+	ptr1 = ft_strctrim(s, c);
+	IFRETURN(!ptr1, NULL);
+	ptr1 = ft_strcmpr(ptr1, c);
+	IFRETURN(!ptr1, NULL);
+	return (ptr1);
+}
+
 char				**ft_strsplit(char const *s, char c)
 {
 	char		**res;
@@ -30,12 +40,12 @@ char				**ft_strsplit(char const *s, char c)
 	char		*ptr1;
 	char		*ptr2;
 
-	ptr1 = ft_strctrim(s, c);
-	ptr1 = ft_strcmpr(ptr1, c);
+	ptr1 = NULL;
+	ptr1 = normalize(ptr1, s, c);
+	IFRETURN(!ptr1, NULL);
 	ptr2 = ptr1;
 	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
-	if (!res)
-		return (NULL);
+	IFRETURN(!res, NULL);
 	resptr = res;
 	while (*ptr2)
 	{

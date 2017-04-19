@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/18 17:25:12 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 11:32:15 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+
+# define IFRETURN(a, b) do {if (a){return (b);}}while(0);
 
 typedef struct		s_list
 {
