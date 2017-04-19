@@ -6,45 +6,33 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 11:06:13 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/15 11:28:12 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/19 13:05:00 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	get_sign(const char *str, int *i, int *sign)
-{
-	if (str[*i] == '-')
-	{
-		*sign = -1;
-		*i += 1;
-	}
-	else if (str[*i] == '+')
-	{
-		*sign = +1;
-		*i += 1;
-	}
-}
-
 int			ft_atoi(const char *nptr)
 {
-	int	res;
-	int	sign;
-	int	i;
+	int					neg_flag;
+	unsigned long long	res;
+	int					i;
 
-	res = 0;
-	sign = 1;
 	i = 0;
-	while (nptr[i] == ' ' || nptr[i] == '\t' || nptr[i] == '\n'
-			|| nptr[i] == '\v' || nptr[i] == '\f' || nptr[i] == '\r')
-		i++;
-	get_sign(nptr, &i, &sign);
-	while (nptr[i])
+	res = 0;
+	while (ft_iswhitespace(*nptr))
+		nptr++;
+	neg_flag = (*nptr == '-') ? -1 : 1;
+	if (*nptr == '+' || *nptr == '-')
+		nptr++;
+	while (*nptr == '0')
+		nptr++;
+	while (ft_isdigit(nptr[i]))
 	{
-		if (nptr[i] < '0' || nptr[i] > '9')
-			return (res * sign);
-		res = (res * 10) + (nptr[i] - '0');
+		res = res * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (res * sign);
+	if (i > 19 || res > 9223372036854775807)
+		return ((neg_flag == 1) ? -1 : 0);
+	return (neg_flag * (int)res);
 }
