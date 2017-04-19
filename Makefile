@@ -82,7 +82,7 @@ $(NAME): $(DIR_OBJS) $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	rm -rf $(DIR_OBJS)
 
 fclean: clean
 	rm -f $(NAME)
