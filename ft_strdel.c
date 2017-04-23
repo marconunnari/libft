@@ -14,18 +14,8 @@
 
 void		ft_strdel(char **as)
 {
-	char	*str;
-	int		i;
-
-	if (as == NULL || *as == NULL)
+	if (!as)
 		return ;
-	i = 0;
-	str = *as;
-	while (str[i])
-	{
-		free(&str[i]);
-		i++;
-	}
 	free(*as);
 	*as = NULL;
 }
