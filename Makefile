@@ -76,7 +76,7 @@ $(DIR_OBJS):
 	mkdir -p $(DIR_OBJS)
 
 $(DIR_OBJS)/%.o: %.c
-	gcc -Wall -Wextra -Werror -c $< -o $@
+	gcc -Wall -Wextra -Werror -Iincludes -c $< -o $@
 
 $(NAME): $(DIR_OBJS) $(OBJS)
 	ar rcs $(NAME) $(OBJS)
