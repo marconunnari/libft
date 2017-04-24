@@ -18,6 +18,7 @@
 # include <string.h>
 
 # define IFRETURN(a, b) do {if (a){return (b);}}while(0);
+# define REASSIGN(a, b) do {void *old = a; a = b; free(old);}while(0);
 
 typedef struct		s_list
 {
