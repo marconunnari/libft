@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char	*ft_strappend(char *str, char c)
 {
 	char	*cs;
