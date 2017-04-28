@@ -45,6 +45,6 @@ char				*ft_lltoa(long long n)
 	}
 	res[i++] = *sign;
 	res = ft_strrev(res);
-	res = ft_strdup(res);
+	REASSIGN(res, ft_strdup(res));
 	return (res);
 }
