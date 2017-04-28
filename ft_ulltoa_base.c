@@ -44,6 +44,6 @@ char				*ft_ulltoa_base(unsigned long long n, int base)
 		i++;
 	}
 	res = ft_strrev(res);
-	res = ft_strdup(res);
+	REASSIGN(res, ft_strdup(res));
 	return (res);
 }
