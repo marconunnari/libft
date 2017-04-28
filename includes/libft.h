@@ -100,5 +100,6 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
+int					ft_strcont(char *str, char c);
 
 #endif
