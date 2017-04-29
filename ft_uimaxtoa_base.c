@@ -6,13 +6,13 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/29 18:09:58 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/29 18:10:08 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/29 18:28:28 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t		getsize(unsigned long long n, int base)
+static size_t		getsize(uintmax_t n, int base)
 {
 	int		size;
 
@@ -22,7 +22,7 @@ static size_t		getsize(unsigned long long n, int base)
 	return (size);
 }
 
-char				*ft_uimaxtoa_base(unsigned long long n, int base)
+char				*ft_uimaxtoa_base(uintmax_t n, int base)
 {
 	char		*res;
 	size_t		i;

@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/29 18:11:06 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/29 18:29:05 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,6 @@ char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
 int					ft_strcont(char *str, char c);
 char				*ft_imaxtoa(intmax_t n);
-char				*ft_uimaxtoa_base(unsigned long long n, int base);
+char				*ft_uimaxtoa_base(uintmax_t n, int base);
 
 #endif
