@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/27 17:35:54 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/04/29 18:11:06 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,6 @@ char				*ft_strctrim(const char *s, int c);
 char				*ft_strcmpr(const char *s, char c);
 char				*ft_contstr(char **arr, const char *s);
 char				*ft_itoa(int n);
-char				*ft_lltoa(long long n);
-char				*ft_ulltoa_base(unsigned long long n, int base);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const*s);
@@ -101,5 +99,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
 int					ft_strcont(char *str, char c);
+char				*ft_imaxtoa(intmax_t n);
+char				*ft_uimaxtoa_base(unsigned long long n, int base);
 
 #endif
