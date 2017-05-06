@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <inttypes.h>
 
 # define IFRETURN(a, b) do {if (a){return (b);}}while(0);
 # define REASSIGN(a, b) do {void *old = a; a = b; free(old);}while(0);
