@@ -103,6 +103,7 @@ char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
 int					ft_strcont(const char *str, char c);
 char				*ft_imaxtoa(intmax_t n);
+char				*ft_imaxtoa_sign(intmax_t n, char *sign);
 char				*ft_uimaxtoa_base(uintmax_t n, int base);
 
 #endif
