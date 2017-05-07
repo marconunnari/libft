@@ -14,9 +14,13 @@
 
 char	*ft_strappend(char *str, char c)
 {
-	char	*cs;
+	char	*new;
+	int	len;
 
-	cs = ft_strnew(1);
-	cs[0] = c;
-	return (ft_strmerge(str, cs));
+	len = ft_strlen(str);
+	new = ft_strnew(len + 2);
+	IFNOTRETURN(new, NULL);
+	new[len + 1] = c;
+	ft_strdel(&str);
+	return (new);
 }

@@ -19,6 +19,8 @@
 # include <inttypes.h>
 
 # define IFRETURN(a, b) do {if (a){return (b);}}while(0);
+# define IFNOTRETURN(a, b) do {if (!a){return (b);}}while(0);
+# define IFRETURNVOID(a) do {if (a){return ;}}while(0);
 # define REASSIGN(a, b) do {void *old = a; a = b; free(old);}while(0);
 
 typedef struct		s_list
@@ -99,7 +101,7 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 char				*ft_strtoupper(char *str);
 char				*ft_strtolower(char *str);
-int					ft_strcont(char *str, char c);
+int					ft_strcont(const char *str, char c);
 char				*ft_imaxtoa(intmax_t n);
 char				*ft_uimaxtoa_base(uintmax_t n, int base);
 

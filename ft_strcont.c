@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int		ft_strcont(char *str, char c)
+int		ft_strcont(const char *str, char c)
 {
 	IFRETURN(!str, 0);
 	while (*str)
