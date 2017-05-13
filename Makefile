@@ -1,84 +1,83 @@
 NAME = libft.a
 DIR_OBJS = objs
+DIR_SRCS = srcs
 
-SRCS =	ft_memset.c \
-	ft_bzero.c \
-	ft_memcpy.c \
-	ft_memccpy.c \
-	ft_memmove.c \
-	ft_memchr.c \
-	ft_memcmp.c \
-	ft_strlen.c \
-	ft_strdup.c \
-	ft_strcpy.c \
-	ft_strncpy.c \
-	ft_strcat.c \
-	ft_strncat.c \
-	ft_strlcat.c \
-	ft_strchr.c \
-	ft_strrchr.c \
-	ft_strstr.c \
-	ft_strnstr.c \
-	ft_strcmp.c \
-	ft_strncmp.c \
-	ft_atoi.c \
-	ft_islower.c \
-	ft_isupper.c \
-	ft_isalpha.c \
-	ft_isdigit.c \
-	ft_isalnum.c \
-	ft_isascii.c \
-	ft_isprint.c \
-	ft_toupper.c \
-	ft_tolower.c \
-	ft_memalloc.c \
-	ft_memdel.c \
-	ft_strnew.c \
-	ft_strdel.c \
-	ft_strclr.c \
-	ft_striter.c \
-	ft_striteri.c \
-	ft_strmap.c \
-	ft_strmapi.c \
-	ft_strequ.c \
-	ft_strnequ.c \
-	ft_strsub.c \
-	ft_strjoin.c \
-	ft_strmerge.c \
-	ft_strappend.c \
-	ft_strprepend.c \
-	ft_strremove.c \
-	ft_strreplace.c \
-	ft_strtrim.c \
-	ft_strrev.c \
-	ft_strsplit.c \
-	ft_strftrim.c \
-	ft_iswhitespace.c \
-	ft_strctrim.c \
-	ft_strcmpr.c \
-	ft_contstr.c \
-	ft_itoa.c \
-	ft_imaxtoa.c \
-	ft_imaxtoa_sign.c \
-	ft_uimaxtoa_base.c \
-	ft_putchar.c \
-	ft_putstr.c \
-	ft_putendl.c \
-	ft_putnbr.c \
-	ft_putchar_fd.c \
-	ft_putstr_fd.c \
-	ft_putendl_fd.c \
-	ft_putnbr_fd.c \
-	ft_lstnew.c \
-	ft_lstdelone.c \
-	ft_lstadd.c \
-	ft_lstiter.c \
-	ft_lstdel.c \
-	ft_lstmap.c \
-	ft_strtoupper.c \
-	ft_strtolower.c \
-	ft_strcont.c \
-	#new#
+SRCS =	mem/ft_memset.c \
+	mem/ft_bzero.c \
+	mem/ft_memcpy.c \
+	mem/ft_memccpy.c \
+	mem/ft_memmove.c \
+	mem/ft_memchr.c \
+	mem/ft_memcmp.c \
+	mem/ft_memalloc.c \
+	mem/ft_memdel.c \
+	str/ft_strlen.c \
+	str/ft_strdup.c \
+	str/ft_strcpy.c \
+	str/ft_strncpy.c \
+	str/ft_strcat.c \
+	str/ft_strncat.c \
+	str/ft_strlcat.c \
+	str/ft_strchr.c \
+	str/ft_strrchr.c \
+	str/ft_strstr.c \
+	str/ft_strnstr.c \
+	str/ft_strcmp.c \
+	str/ft_strncmp.c \
+	str/ft_strdel.c \
+	str/ft_strclr.c \
+	str/ft_striter.c \
+	str/ft_striteri.c \
+	str/ft_strmap.c \
+	str/ft_strmapi.c \
+	str/ft_strequ.c \
+	str/ft_strnequ.c \
+	str/ft_strsub.c \
+	str/ft_strjoin.c \
+	str/ft_strmerge.c \
+	str/ft_strappend.c \
+	str/ft_strprepend.c \
+	str/ft_strremove.c \
+	str/ft_strreplace.c \
+	str/ft_strtrim.c \
+	str/ft_strrev.c \
+	str/ft_strsplit.c \
+	str/ft_strftrim.c \
+	str/ft_strnew.c \
+	str/ft_strctrim.c \
+	str/ft_strcmpr.c \
+	str/ft_strtoupper.c \
+	str/ft_strtolower.c \
+	str/ft_strcont.c \
+	str/ft_toupper.c \
+	str/ft_tolower.c \
+	is/ft_islower.c \
+	is/ft_isupper.c \
+	is/ft_isalpha.c \
+	is/ft_isdigit.c \
+	is/ft_isalnum.c \
+	is/ft_isascii.c \
+	is/ft_isprint.c \
+	is/ft_iswhitespace.c \
+	conv/ft_atoi.c \
+	conv/ft_imaxtoa.c \
+	conv/ft_imaxtoa_sign.c \
+	conv/ft_uimaxtoa_base.c \
+	put/ft_putchar.c \
+	put/ft_putstr.c \
+	put/ft_putendl.c \
+	put/ft_putnbr.c \
+	put/ft_putchar_fd.c \
+	put/ft_putstr_fd.c \
+	put/ft_putendl_fd.c \
+	put/ft_putnbr_fd.c \
+	lst/ft_lstnew.c \
+	lst/ft_lstdelone.c \
+	lst/ft_lstadd.c \
+	lst/ft_lstiter.c \
+	lst/ft_lstdel.c \
+	lst/ft_lstmap.c \
+	arr/ft_contstr.c \
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
 
@@ -86,8 +85,15 @@ all: $(NAME)
 
 $(DIR_OBJS):
 	mkdir -p $(DIR_OBJS)
+	mkdir -p $(DIR_OBJS)/mem
+	mkdir -p $(DIR_OBJS)/str
+	mkdir -p $(DIR_OBJS)/lst
+	mkdir -p $(DIR_OBJS)/is
+	mkdir -p $(DIR_OBJS)/conv
+	mkdir -p $(DIR_OBJS)/put
+	mkdir -p $(DIR_OBJS)/arr
 
-$(DIR_OBJS)/%.o: %.c
+$(OBJS): $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c
 	gcc -Wall -Wextra -Werror -Iincludes -c $< -o $@
 
 $(NAME): $(DIR_OBJS) $(OBJS)
