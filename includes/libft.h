@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/10 17:46:23 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/13 14:51:50 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmerge(char *s1, char *s2);
 char				*ft_strappend(char *s1, char c);
 void				ft_strremove(char *str, char c);
+void				ft_strreplace(char *str, char toreplace,
+								char replacement);
 char				*ft_strprepend(char c, char *str);
 char				*ft_strtrim(char const *s);
 char				*ft_strrev(char *str);
