@@ -30,6 +30,14 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct		s_btree
+{
+	void			*content;
+	size_t			content_size;
+	struct s_btree	*left;
+	struct s_btree	*right;
+}					t_btree;
+
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *str, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
