@@ -78,25 +78,28 @@ SRCS =	mem/ft_memset.c \
 	lst/ft_lstdel.c \
 	lst/ft_lstmap.c \
 	arr/ft_contstr.c \
+	btree/ft_btreenew.c \
+	btree/ft_btreeadd.c \
+	btree/ft_btree_apply_prefix.c \
+	btree/ft_btree_apply_infix.c \
+	btree/ft_btree_apply_suffix.c \
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
+
+DIRS_OBJS= mem str lst is conv put arr btree
 
 all: $(NAME)
 
 $(DIR_OBJS):
 	mkdir -p $(DIR_OBJS)
-	mkdir -p $(DIR_OBJS)/mem
-	mkdir -p $(DIR_OBJS)/str
-	mkdir -p $(DIR_OBJS)/lst
-	mkdir -p $(DIR_OBJS)/is
-	mkdir -p $(DIR_OBJS)/conv
-	mkdir -p $(DIR_OBJS)/put
-	mkdir -p $(DIR_OBJS)/arr
+
+$(DIRS_OBJS): $(DIR_OBJS)
+	mkdir -p $(DIR_OBJS)/$@
 
 $(OBJS): $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c
 	gcc -Wall -Wextra -Werror -Iincludes -c $< -o $@
 
-$(NAME): $(DIR_OBJS) $(OBJS)
+$(NAME): $(DIRS_OBJS) $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:

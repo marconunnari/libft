@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/13 14:51:50 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/14 17:04:26 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,4 +124,12 @@ char				*ft_imaxtoa_sign(intmax_t n, char *sign);
 char				*ft_uimaxtoa_base(uintmax_t n, int base);
 
 char				*ft_contstr(char **arr, const char *s);
+
+t_btree				*ft_btreenew(void *content, size_t content_size);
+void				ft_btree_apply_prefix(t_btree *root, void (*applyf)(t_btree*));
+void				ft_btree_apply_infix(t_btree *root, void (*applyf)(t_btree*));
+void				ft_btree_apply_suffix(t_btree *root, void (*applyf)(t_btree*));
+void	ft_btreeadd(t_btree **root, t_btree *new,
+					int (*cmpf)(t_btree*, t_btree*));
+
 #endif
