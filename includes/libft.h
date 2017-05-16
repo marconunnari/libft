@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/14 17:04:26 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,5 +131,5 @@ void				ft_btree_apply_infix(t_btree *root, void (*applyf)(t_btree*));
 void				ft_btree_apply_suffix(t_btree *root, void (*applyf)(t_btree*));
 void	ft_btreeadd(t_btree **root, t_btree *new,
 					int (*cmpf)(t_btree*, t_btree*));
-
+void			ft_btreedelone(t_btree **btree, void (*del)(void *, size_t));
 #endif

@@ -83,6 +83,7 @@ SRCS =	mem/ft_memset.c \
 	btree/ft_btree_apply_prefix.c \
 	btree/ft_btree_apply_infix.c \
 	btree/ft_btree_apply_suffix.c \
+	btree/ft_btreedelone.c \
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
 

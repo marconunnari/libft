@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/14 15:11:36 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/14 15:14:05 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/16 21:38:44 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,24 @@ t_btree		*ft_btreenew(void *content, size_t content_size)
 	t_btree		*new;
 
 	new = (t_btree*)malloc(sizeof(t_btree));
-	new->content = content;
-	new->content_size = content_size;
+	if (!new)
+		return (NULL);
+	if (content == NULL)
+	{
+		new->content = NULL;
+		new->content_size = 0;
+	}
+	else
+	{
+		new->content = malloc(content_size);
+		if (!new->content)
+		{
+			free(new);
+			return (NULL);
+		}
+		ft_memcpy(new->content, content, content_size);
+		new->content_size = content_size;
+	}
 	new->left = NULL;
 	new->right = NULL;
 	return (new);
