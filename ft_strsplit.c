@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:51 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/19 18:45:28 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 15:08:29 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,14 @@ char				**ft_strsplit(char const *s, char c)
 	char		**res;
 	char		*ptr1;
 
-	IFRETURN(!s, NULL);
+	if (!s)
+		return (NULL);
 	ptr1 = ft_strctrim(s, c);
-	IFRETURN(!ptr1, NULL);
+	if (!ptr1)
+			return (NULL);
 	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
-	IFRETURN(!res, NULL);
+	if (!res)
+		return (NULL);
 	loop(ptr1, res, c);
 	return (res);
 }

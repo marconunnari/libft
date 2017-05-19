@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/29 18:08:53 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/29 18:09:02 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 14:59:16 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,5 @@ char				*ft_imaxtoa(intmax_t n)
 	}
 	res[i++] = *sign;
 	res = ft_strrev(res);
-	REASSIGN(res, ft_strdup(res));
 	return (res);
 }

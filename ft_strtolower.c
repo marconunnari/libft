@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/06 18:19:23 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/06 18:19:30 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 15:03:30 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char		*ft_strtolower(char *str)
 {
 	int		i;
 
-	IFRETURN(str == NULL, NULL);
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{

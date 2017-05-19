@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/29 18:09:58 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/29 18:28:28 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 15:00:16 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ char				*ft_uimaxtoa_base(uintmax_t n, int base)
 
 	size = getsize(n, base);
 	res = ft_strnew(size + 1);
-	IFRETURN(!res, NULL);
+	if (!res)
+		return (NULL);
 	i = 0;
 	while (i < size)
 	{
@@ -44,6 +45,5 @@ char				*ft_uimaxtoa_base(uintmax_t n, int base)
 		i++;
 	}
 	res = ft_strrev(res);
-	REASSIGN(res, ft_strdup(res));
 	return (res);
 }

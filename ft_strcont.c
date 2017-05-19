@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/06 18:20:03 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/06 18:20:14 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 15:04:12 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int		ft_strcont(const char *str, char c)
 {
-	IFRETURN(!str, 0);
+	if (!str)
+		return (0);
 	while (*str)
 	{
 		if (*str == c)

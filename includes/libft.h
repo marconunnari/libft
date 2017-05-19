@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/13 14:51:50 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/19 14:52:44 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 # include <unistd.h>
 # include <string.h>
 # include <inttypes.h>
-
-# define IFRETURN(a, b) do {if (a){return (b);}}while(0);
-# define IFNOTRETURN(a, b) do {if (!a){return (b);}}while(0);
-# define IFRETURNVOID(a) do {if (a){return ;}}while(0);
-# define REASSIGN(a, b) do {void *old = a; a = b; free(old);}while(0);
 
 typedef struct		s_list
 {
