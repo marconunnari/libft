@@ -18,11 +18,6 @@
 # include <string.h>
 # include <inttypes.h>
 
-# define IFRETURN(a, b) do {if (a){return (b);}}while(0);
-# define IFNOTRETURN(a, b) do {if (!a){return (b);}}while(0);
-# define IFRETURNVOID(a) do {if (a){return ;}}while(0);
-# define REASSIGN(a, b) do {void *old = a; a = b; free(old);}while(0);
-
 typedef struct		s_list
 {
 	void			*content;

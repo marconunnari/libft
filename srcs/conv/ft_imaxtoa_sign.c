@@ -43,6 +43,5 @@ char				*ft_imaxtoa_sign(intmax_t n, char *sign)
 		i++;
 	}
 	res = ft_strrev(res);
-	REASSIGN(res, ft_strdup(res));
 	return (res);
 }

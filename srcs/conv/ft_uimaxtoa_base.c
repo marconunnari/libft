@@ -31,7 +31,8 @@ char				*ft_uimaxtoa_base(uintmax_t n, int base)
 
 	size = getsize(n, base);
 	res = ft_strnew(size + 1);
-	IFRETURN(!res, NULL);
+	if (!res)
+		return (NULL);
 	i = 0;
 	while (i < size)
 	{
@@ -44,6 +45,5 @@ char				*ft_uimaxtoa_base(uintmax_t n, int base)
 		i++;
 	}
 	res = ft_strrev(res);
-	REASSIGN(res, ft_strdup(res));
 	return (res);
 }

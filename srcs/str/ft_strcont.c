@@ -14,7 +14,8 @@
 
 int		ft_strcont(const char *str, char c)
 {
-	IFRETURN(!str, 0);
+	if (!str)
+		return (0);
 	while (*str)
 	{
 		if (*str == c)

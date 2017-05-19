@@ -16,7 +16,8 @@ char		*ft_strtoupper(char *str)
 {
 	int		i;
 
-	IFRETURN(str == NULL, NULL);
+	if (str == NULL)
+		return (NULL);
 	i = 0;
 	while (str[i])
 	{
