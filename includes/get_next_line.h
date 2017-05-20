@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/04/21 17:53:00 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/04/24 18:47:50 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
+# define GNL_BUFF_SIZE 32
 
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_printf.h"
-# include "get_next_line.h"
+typedef struct		s_remain
+{
+	int				fd;
+	char			*content;
+}					t_remain;
+
+int					get_next_line(int fd, char **str);
 
 #endif
