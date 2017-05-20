@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_conv_pc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/05/07 17:43:46 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/05/07 17:44:07 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
-
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_printf.h"
-
-#endif
+void		conv_pc(t_placeholder *ph, va_list ap)
+{
+	(void)ph;
+	(void)ap;
+	ft_printf_putchar('%');
+}

@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_doprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/05/06 18:59:02 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/05/07 16:25:50 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
-
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_printf.h"
-
-#endif
+void			do_print(const char *format, va_list ap)
+{
+	while (*format)
+	{
+		if (*format == '%')
+			do_conv(&format, ap);
+		else
+			ft_printf_putchar(*format++);
+	}
+}

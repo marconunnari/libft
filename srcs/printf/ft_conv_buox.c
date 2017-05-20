@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_conv_buox.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/05/19 14:44:49 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/05/19 14:44:51 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
+void			conv_x(t_placeholder *ph, va_list ap)
+{
+	conv_ubase(ph, ap, 16);
+}
 
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_printf.h"
+void			conv_o(t_placeholder *ph, va_list ap)
+{
+	conv_ubase(ph, ap, 8);
+}
 
-#endif
+void			conv_u(t_placeholder *ph, va_list ap)
+{
+	conv_ubase(ph, ap, 10);
+}
+
+void			conv_b(t_placeholder *ph, va_list ap)
+{
+	conv_ubase(ph, ap, 2);
+}

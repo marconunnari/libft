@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:46:02 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/05/06 17:39:33 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/05/10 13:54:55 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
+extern int g_res;
 
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_printf.h"
+int				ft_printf(const char *format, ...)
+{
+	va_list		ap;
+	int			res;
 
-#endif
+	va_start(ap, format);
+	do_print(format, ap);
+	va_end(ap);
+	res = g_res;
+	g_res = 0;
+	return (res);
+}
