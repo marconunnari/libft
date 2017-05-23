@@ -3,7 +3,7 @@ DIR_OBJS = objs
 DIR_SRCS = srcs
 
 SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
-	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memalloc.c mem/ft_memdel.c \
+	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memalloc.c mem/ft_memdel.c mem/ft_swap_ints.c \
 	str/ft_strlen.c str/ft_strdup.c str/ft_strcpy.c str/ft_strncpy.c str/ft_strcat.c \
 	str/ft_strncat.c str/ft_strlcat.c str/ft_strchr.c str/ft_strrchr.c str/ft_strstr.c \
 	str/ft_strnstr.c str/ft_strcmp.c str/ft_strncmp.c str/ft_strdel.c str/ft_strclr.c \
@@ -38,21 +38,24 @@ DIRS_OBJS= mem str lst is conv put btree printf gnl
 all: $(NAME)
 
 $(DIR_OBJS):
-	mkdir -p $(DIR_OBJS)
+	@mkdir -p $(DIR_OBJS)
 
 $(DIRS_OBJS): $(DIR_OBJS)
-	mkdir -p $(DIR_OBJS)/$@
+	@mkdir -p $(DIR_OBJS)/$@
 
 $(OBJS): $(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c
-	gcc -Wall -Wextra -Werror -Iincludes -c $< -o $@
+	@gcc -Wall -Wextra -Werror -Iincludes -c $< -o $@
 
 $(NAME): $(DIRS_OBJS) $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	@ar rcs $(NAME) $(OBJS)
+	@echo "$(NAME) done!"
 
 clean:
-	rm -rf $(DIR_OBJS)
+	@rm -rf $(DIR_OBJS)
+	@echo "objects deleted"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(NAME) deleted"
 
 re: fclean all
