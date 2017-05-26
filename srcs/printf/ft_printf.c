@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/06 17:39:33 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/10 13:54:55 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/26 16:53:38 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,21 @@ int				ft_dprintf(int fd, const char *format, ...)
 	g_res = 0;
 	va_start(ap, format);
 	do_print(format, ap);
+	va_end(ap);
+	res = g_res;
+	return (res);
+}
+
+int				ft_printfnl(const char *format, ...)
+{
+	va_list		ap;
+	int			res;
+
+	g_res = 0;
+	g_fd = 1;
+	va_start(ap, format);
+	do_print(format, ap);
+	ft_printf_putchar('\n');
 	va_end(ap);
 	res = g_res;
 	return (res);

@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/24 16:46:32 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/19 14:46:36 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/26 16:52:52 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <wchar.h>
 
 int				ft_printf(const char *restrict format, ...);
+int				ft_printfnl(const char *restrict format, ...);
 int				ft_dprintf(int fd, const char *format, ...);
 
 typedef struct	s_placeholder
