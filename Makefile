@@ -19,7 +19,8 @@ SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_me
 	put/ft_putchar.c put/ft_putstr.c put/ft_putendl.c put/ft_putnbr.c \
 	put/ft_putchar_fd.c put/ft_putstr_fd.c put/ft_putendl_fd.c put/ft_putnbr_fd.c \
 	lst/ft_lstnew.c lst/ft_lstdelone.c lst/ft_lstadd.c lst/ft_lstiter.c \
-	lst/ft_lstdel.c lst/ft_lstmap.c lst/ft_lstiter_rev.c\
+	lst/ft_lstdel.c lst/ft_lstmap.c lst/ft_lstiter_rev.c lst/ft_lstpush.c\
+	lst/ft_lstpop.c lst/ft_lstshift.c \
 	btree/ft_btreenew.c btree/ft_btreeadd.c btree/ft_btree_apply_prefix.c \
 	btree/ft_btree_apply_infix.c btree/ft_btree_apply_suffix.c \
 	btree/ft_btreedelone.c \

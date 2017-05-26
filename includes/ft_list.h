@@ -17,4 +17,7 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstiter_rev(t_list *lst, void (*f)(t_list *elem));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void				ft_lstpush(t_list **alst, t_list *new);
+t_list				*ft_lstpop(t_list **lst);
+t_list			*ft_lstshift(t_list **lst);
 #endif
