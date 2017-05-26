@@ -17,6 +17,7 @@
 # include <wchar.h>
 
 int				ft_printf(const char *restrict format, ...);
+int				ft_dprintf(int fd, const char *format, ...);
 
 typedef struct	s_placeholder
 {

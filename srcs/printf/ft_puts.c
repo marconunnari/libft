@@ -13,10 +13,11 @@
 #include "libft.h"
 
 int		g_res;
+int		g_fd;
 
 void			ft_printf_putchar(char c)
 {
-	write(1, &c, 1);
+	write(g_fd, &c, 1);
 	g_res++;
 }
 
