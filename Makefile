@@ -29,7 +29,7 @@ SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_me
 	printf/ft_conv_wc.c printf/ft_conv_ws.c printf/ft_createph.c \
 	printf/ft_doconv.c printf/ft_doprint.c printf/ft_getph.c \
 	printf/ft_numprec.c printf/ft_printf.c printf/ft_puts.c \
-	printf/ft_wchar.c printf/ft_width.c \
+	printf/ft_wchar.c printf/ft_width.c printf/ft_error.c \
 	gnl/get_next_line.c
 
 OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
