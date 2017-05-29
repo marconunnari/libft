@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/21 17:53:00 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/24 18:47:50 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/29 14:02:21 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ typedef struct		s_remain
 }					t_remain;
 
 int					get_next_line(int fd, char **str);
+int					process_line(t_remain *remain, char **line);
 
 #endif

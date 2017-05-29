@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/14 15:54:14 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/14 16:31:53 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/29 13:25:20 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,3 @@ void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(t_btree*))
 		ft_btree_apply_prefix(root->right, applyf);
 	}
 }
-
