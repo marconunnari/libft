@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/05/29 14:35:29 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/05/29 14:35:56 by mnunnari         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_LIST_H
 # define FT_LIST_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 typedef struct		s_list
 {
@@ -20,5 +32,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void				ft_lstpush(t_list **alst, t_list *new);
 t_list				*ft_lstpop(t_list **lst);
 t_list				*ft_lstshift(t_list **lst);
-void				*ft_lstreduce(t_list *lst, void *(*f)(void*, void*, size_t));
+void				*ft_lstreduce(t_list *lst,
+					void *(*f)(void*, void*, size_t));
 #endif
