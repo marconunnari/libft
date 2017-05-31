@@ -4,6 +4,7 @@ DIR_SRCS = srcs
 
 SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
 	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memalloc.c mem/ft_memdel.c mem/ft_swap_ints.c \
+	mem/ft_quicksort.c mem/ft_swap.c \
 	str/ft_strlen.c str/ft_strdup.c str/ft_strcpy.c str/ft_strncpy.c str/ft_strcat.c \
 	str/ft_strncat.c str/ft_strlcat.c str/ft_strchr.c str/ft_strrchr.c str/ft_strstr.c \
 	str/ft_strnstr.c str/ft_strcmp.c str/ft_strncmp.c str/ft_strdel.c str/ft_strclr.c \
