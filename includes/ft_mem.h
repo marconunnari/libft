@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:36:06 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/29 14:36:08 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/05/31 20:41:24 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 void				ft_swap_ints(int *ptr1, int *ptr2);
 void				ft_quicksort(void **array, int left, int right,
-				int (*cmp)(const void *, const void *));
-void			ft_swap(void **array, int i, int j);
+					int (*cmp)(const void *, const void *));
+void				ft_swap(void **array, int i, int j);
 #endif
