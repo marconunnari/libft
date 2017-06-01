@@ -17,6 +17,7 @@ SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_me
 	is/ft_islower.c is/ft_isupper.c is/ft_isalpha.c is/ft_isdigit.c \
 	is/ft_isalnum.c is/ft_isascii.c is/ft_isprint.c is/ft_iswhitespace.c \
 	conv/ft_atoi.c conv/ft_imaxtoa.c conv/ft_imaxtoa_sign.c conv/ft_uimaxtoa_base.c \
+	conv/ft_atoimax.c \
 	put/ft_putchar.c put/ft_putstr.c put/ft_putendl.c put/ft_putnbr.c \
 	put/ft_putchar_fd.c put/ft_putstr_fd.c put/ft_putendl_fd.c put/ft_putnbr_fd.c \
 	lst/ft_lstnew.c lst/ft_lstdelone.c lst/ft_lstadd.c lst/ft_lstiter.c \
