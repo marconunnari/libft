@@ -34,4 +34,5 @@ t_list				*ft_lstpop(t_list **lst);
 t_list				*ft_lstshift(t_list **lst);
 void				*ft_lstreduce(t_list *lst,
 					void *(*f)(void*, void*, size_t));
+size_t			ft_lstlen(t_list *list);
 #endif
