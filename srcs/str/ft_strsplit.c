@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/17 18:59:51 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/04/19 18:45:28 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/05 17:52:17 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,6 @@ char				**ft_strsplit(char const *s, char c)
 	if (!res)
 		return (NULL);
 	loop(ptr1, res, c);
+	free(ptr1);
 	return (res);
 }

@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:35:29 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/04 17:32:43 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/05 19:11:27 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_list				*ft_lstpop(t_list **lst);
 t_list				*ft_lstshift(t_list **lst);
 void				*ft_lstreduce(t_list *lst,
 					void *(*f)(void*, void*, size_t));
-size_t			ft_lstlen(t_list *list);
-t_list			*ft_lsttail(t_list *lst);
-t_list			*ft_lstat(t_list *lst, int i);
+size_t				ft_lstlen(t_list *list);
+t_list				*ft_lsttail(t_list *lst);
+t_list				*ft_lstat(t_list *lst, int i);
 #endif
