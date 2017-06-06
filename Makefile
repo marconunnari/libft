@@ -2,40 +2,56 @@ NAME = libft.a
 DIR_OBJS = objs
 DIR_SRCS = srcs
 
-SRCS =	mem/ft_memset.c mem/ft_bzero.c mem/ft_memcpy.c mem/ft_memccpy.c mem/ft_memmove.c \
-	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memalloc.c mem/ft_memdel.c mem/ft_swap_ints.c \
-	mem/ft_quicksort.c mem/ft_swap.c \
-	str/ft_strlen.c str/ft_strdup.c str/ft_strcpy.c str/ft_strncpy.c str/ft_strcat.c \
-	str/ft_strncat.c str/ft_strlcat.c str/ft_strchr.c str/ft_strrchr.c str/ft_strstr.c \
-	str/ft_strnstr.c str/ft_strcmp.c str/ft_strncmp.c str/ft_strdel.c str/ft_strclr.c \
-	str/ft_striter.c str/ft_striteri.c str/ft_strmap.c str/ft_strmapi.c str/ft_strequ.c \
-	str/ft_strnequ.c str/ft_strsub.c str/ft_strjoin.c str/ft_strmerge.c str/ft_strappend.c \
-	str/ft_strprepend.c str/ft_strremove.c 	str/ft_strreplace.c str/ft_strtrim.c \
-	str/ft_strrev.c str/ft_strsplit.c str/ft_strftrim.c str/ft_strnew.c str/ft_strctrim.c \
-	str/ft_strcmpr.c str/ft_strtoupper.c str/ft_strtolower.c str/ft_strcont.c \
-	str/ft_toupper.c str/ft_tolower.c str/ft_contstr.c \
-	is/ft_islower.c is/ft_isupper.c is/ft_isalpha.c is/ft_isdigit.c \
-	is/ft_isalnum.c is/ft_isascii.c is/ft_isprint.c is/ft_iswhitespace.c \
-	conv/ft_atoi.c conv/ft_imaxtoa.c conv/ft_imaxtoa_sign.c conv/ft_uimaxtoa_base.c \
-	conv/ft_atoimax.c \
-	put/ft_putchar.c put/ft_putstr.c put/ft_putendl.c put/ft_putnbr.c \
-	put/ft_putchar_fd.c put/ft_putstr_fd.c put/ft_putendl_fd.c put/ft_putnbr_fd.c \
-	lst/ft_lstnew.c lst/ft_lstdelone.c lst/ft_lstadd.c lst/ft_lstiter.c \
-	lst/ft_lstdel.c lst/ft_lstmap.c lst/ft_lstiter_rev.c lst/ft_lstpush.c \
-	lst/ft_lstpop.c lst/ft_lstshift.c lst/ft_lstreduce.c lst/ft_lstlen.c \
-	lst/ft_lsttail.c lst/ft_lstat.c \
-	btree/ft_btreenew.c btree/ft_btreeadd.c btree/ft_btree_apply_prefix.c \
-	btree/ft_btree_apply_infix.c btree/ft_btree_apply_suffix.c \
-	btree/ft_btreedelone.c \
-	printf/ft_conv_buox.c printf/ft_conv_c.c printf/ft_conv_d.c \
-	printf/ft_conv_pc.c printf/ft_conv_s.c printf/ft_conv_ubase.c \
-	printf/ft_conv_wc.c printf/ft_conv_ws.c printf/ft_createph.c \
-	printf/ft_doconv.c printf/ft_doprint.c printf/ft_getph.c \
-	printf/ft_numprec.c printf/ft_printf.c printf/ft_puts.c \
-	printf/ft_wchar.c printf/ft_width.c printf/ft_error.c \
-	gnl/get_next_line.c gnl/process_line.c
+MEM=	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
+		ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c \
+		ft_memset.c ft_quicksort.c ft_swap.c ft_swap_ints.c
+SRCS += $(addprefix $(DIR_SRCS)/mem/, $(MEM))
 
-OBJS = $(SRCS:%.c=$(DIR_OBJS)/%.o)
+STR=	ft_contstr.c ft_strappend.c ft_strcat.c ft_strchr.c \
+		ft_strclr.c ft_strcmp.c ft_strcmpr.c ft_strcont.c \
+		ft_strcpy.c ft_strctrim.c ft_strdel.c ft_strdup.c \
+		ft_strequ.c ft_strftrim.c ft_striter.c ft_striteri.c \
+		ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c \
+		ft_strmapi.c ft_strmerge.c ft_strncat.c ft_strncmp.c \
+		ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
+		ft_strprepend.c ft_strrchr.c ft_strremove.c ft_strreplace.c \
+		ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtolower.c \
+		ft_strtoupper.c ft_strtrim.c ft_tolower.c ft_toupper.c
+SRCS += $(addprefix $(DIR_SRCS)/str/, $(STR))
+
+IS=		ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
+		ft_islower.c ft_isprint.c ft_isupper.c ft_iswhitespace.c
+SRCS += $(addprefix $(DIR_SRCS)/is/, $(IS))
+
+CONV=	ft_atoi.c ft_atoimax.c ft_imaxtoa.c ft_imaxtoa_sign.c \
+		ft_itoa.c ft_uimaxtoa_base.c
+SRCS += $(addprefix $(DIR_SRCS)/conv/, $(CONV))
+
+PUT=	ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
+		ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c
+SRCS += $(addprefix $(DIR_SRCS)/put/, $(PUT))
+
+LST=	ft_lstadd.c ft_lstat.c ft_lstdel.c ft_lstdelone.c \
+		ft_lstiter.c ft_lstiter_rev.c ft_lstlen.c ft_lstmap.c \
+		ft_lstnew.c ft_lstpop.c ft_lstpush.c ft_lstreduce.c \
+		ft_lstshift.c ft_lsttail.c
+SRCS += $(addprefix $(DIR_SRCS)/lst/, $(LST))
+
+BTREE=	ft_btree_apply_infix.c ft_btree_apply_prefix.c ft_btree_apply_suffix.c \
+		ft_btreeadd.c ft_btreedelone.c ft_btreenew.c
+SRCS += $(addprefix $(DIR_SRCS)/btree/, $(BTREE))
+
+PRINTF=	ft_conv_buox.c ft_conv_c.c ft_conv_d.c ft_conv_pc.c \
+		ft_conv_s.c ft_conv_ubase.c ft_conv_wc.c ft_conv_ws.c \
+		ft_createph.c ft_doconv.c ft_doprint.c ft_error.c \
+		ft_getph.c ft_numprec.c ft_printf.c ft_puts.c \
+		ft_wchar.c ft_width.c
+SRCS += $(addprefix $(DIR_SRCS)/printf/, $(PRINTF))
+
+GNL=	get_next_line.c process_line.c
+SRCS += $(addprefix $(DIR_SRCS)/gnl/, $(GNL))
+
+OBJS = $(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
 DIRS_OBJS= mem str lst is conv put btree printf gnl
 
