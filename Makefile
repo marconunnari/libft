@@ -34,7 +34,7 @@ SRCS += $(addprefix $(DIR_SRCS)/put/, $(PUT))
 LST=	ft_lstadd.c ft_lstat.c ft_lstdel.c ft_lstdelone.c \
 		ft_lstiter.c ft_lstiter_rev.c ft_lstlen.c ft_lstmap.c \
 		ft_lstnew.c ft_lstpop.c ft_lstpush.c ft_lstreduce.c \
-		ft_lstshift.c ft_lsttail.c
+		ft_lstshift.c ft_lsttail.c ft_lstaddnew.c
 SRCS += $(addprefix $(DIR_SRCS)/lst/, $(LST))
 
 BTREE=	ft_btree_apply_infix.c ft_btree_apply_prefix.c ft_btree_apply_suffix.c \
