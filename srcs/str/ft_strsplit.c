@@ -16,50 +16,63 @@ static size_t		words(const char *s, char c)
 {
 	size_t		words;
 
-	words = 1;
+	words = 0;
 	while (*s)
-		if (*s++ == c)
-			words = words + 1;
+	{
+		if (*s != c)
+		{
+			words++;
+			while (*s && *s != c)
+				s++;
+		}
+		s++;
+	}
 	return (words);
 }
 
-static void			loop(char *ptr1, char **res, char c)
+static void			loop(char *str, char **res,
+		char c, size_t size)
 {
-	char		*ptr2;
-	char		**resptr;
+	size_t		i;
+	size_t		j;
+	size_t		z;
 
-	ptr2 = ptr1;
-	resptr = res;
-	while (*ptr2)
+	i = 0;
+	j = 0;
+	z = 0;
+	while (z < size)
 	{
-		if (*ptr2 == c)
+		if (str[i] == c || str[i] == '\0')
 		{
-			*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
-			while (*ptr2 == c)
-				ptr2++;
-			ptr1 = ptr2;
+			res[z++] = ft_strsub(str, j, i - j);
+			while (str[i] == c)
+				i++;
+			j = i;
 		}
-		ptr2++;
+		i++;
 	}
-	if (ptr2 > ptr1)
-		*resptr++ = ft_strsub(ptr1, 0, ptr2 - ptr1);
-	*resptr = 0;
 }
 
 char				**ft_strsplit(char const *s, char c)
 {
 	char		**res;
-	char		*ptr1;
+	char		*str;
+	size_t		size;
 
 	if (!s)
 		return (NULL);
-	ptr1 = ft_strctrim(s, c);
-	if (!ptr1)
+	if (*s)
+		str = ft_strctrim(s, c);
+	else
+		str = ft_strdup(s);
+	if (!str)
 		return (NULL);
-	res = (char**)malloc(sizeof(char*) * words(ptr1, c) + 1);
+	size = words(str, c);
+	res = (char**)malloc(sizeof(char*) * (size + 1));
 	if (!res)
 		return (NULL);
-	loop(ptr1, res, c);
-	free(ptr1);
+	res[size] = NULL;
+	loop(str, res, c, size);
+	free(str);
 	return (res);
 }

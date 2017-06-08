@@ -56,6 +56,7 @@ int				get_next_line(const int fd, char **line)
 {
 	static t_list		*remains;
 	t_remain			*remain;
+	int				res;
 
 	if (fd < 0 || !line)
 		return (-1);
@@ -64,5 +65,8 @@ int				get_next_line(const int fd, char **line)
 		remain = create_remain(&remains, fd);
 	if (!remain)
 		return (-1);
-	return (process_line(remain, line));
+	res = (process_line(remain, line));
+	if (res < 1)
+		free(*line);
+	return (res);
 }
