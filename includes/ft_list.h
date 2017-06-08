@@ -39,4 +39,6 @@ void				*ft_lstreduce(t_list *lst,
 size_t				ft_lstlen(t_list *list);
 t_list				*ft_lsttail(t_list *lst);
 t_list				*ft_lstat(t_list *lst, int i);
+void				ft_lstpushnew(t_list **alst, void *content,
+				size_t content_size);
 #endif

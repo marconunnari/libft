@@ -58,8 +58,6 @@ int				process_line(t_remain *remain, char **line)
 {
 	char			*buffer;
 
-	if (line && *line)
-		free(*line);
 	*line = ft_strnew(0);
 	if (remain->content)
 	{

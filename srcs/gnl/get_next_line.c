@@ -66,7 +66,5 @@ int				get_next_line(const int fd, char **line)
 	if (!remain)
 		return (-1);
 	res = (process_line(remain, line));
-	if (res < 1)
-		free(*line);
 	return (res);
 }
