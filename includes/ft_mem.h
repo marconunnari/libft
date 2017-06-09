@@ -26,4 +26,5 @@ void				ft_swap_ints(int *ptr1, int *ptr2);
 void				ft_quicksort(void **array, int left, int right,
 					int (*cmp)(const void *, const void *));
 void				ft_swap(void **array, int i, int j);
+size_t			ft_arrlen(void **arr);
 #endif

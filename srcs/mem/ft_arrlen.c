@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_arrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/15 17:24:50 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/09 09:41:01 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/06/09 10:11:34 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/06/09 11:26:38 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
-# include <inttypes.h>
+size_t			ft_arrlen(void **arr)
+{
+	size_t	i;
 
-# include "ft_btree.h"
-# include "ft_conv.h"
-# include "ft_is.h"
-# include "ft_list.h"
-# include "ft_mem.h"
-# include "ft_put.h"
-# include "ft_str.h"
-# include "ft_map.h"
-# include "ft_printf.h"
-# include "get_next_line.h"
-
-#endif
+	if (!arr)
+		return (0);
+	i = 0;
+	while (arr[i])
+		i++;
+	return (i);
+}

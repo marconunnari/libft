@@ -4,7 +4,8 @@ DIR_SRCS = srcs
 
 MEM=	ft_bzero.c ft_memalloc.c ft_memccpy.c ft_memchr.c \
 		ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c \
-		ft_memset.c ft_quicksort.c ft_swap.c ft_swap_ints.c
+		ft_memset.c ft_quicksort.c ft_swap.c ft_swap_ints.c \
+		ft_arrlen.c
 SRCS += $(addprefix $(DIR_SRCS)/mem/, $(MEM))
 
 STR=	ft_contstr.c ft_strappend.c ft_strcat.c ft_strchr.c \
@@ -51,9 +52,12 @@ SRCS += $(addprefix $(DIR_SRCS)/printf/, $(PRINTF))
 GNL=	get_next_line.c process_line.c
 SRCS += $(addprefix $(DIR_SRCS)/gnl/, $(GNL))
 
+MAP=	ft_mapget_lst.c
+SRCS += $(addprefix $(DIR_SRCS)/map/, $(MAP))
+
 OBJS = $(SRCS:$(DIR_SRCS)/%.c=$(DIR_OBJS)/%.o)
 
-DIRS_OBJS= mem str lst is conv put btree printf gnl
+DIRS_OBJS= mem str lst is conv put btree printf gnl map
 
 all: $(NAME)
 
