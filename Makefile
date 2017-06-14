@@ -25,7 +25,7 @@ IS=		ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 SRCS += $(addprefix $(DIR_SRCS)/is/, $(IS))
 
 CONV=	ft_atoi.c ft_atoimax.c ft_imaxtoa.c ft_imaxtoa_sign.c \
-		ft_itoa.c ft_uimaxtoa_base.c
+		ft_itoa.c ft_uimaxtoa_base.c ft_atouimax.c
 SRCS += $(addprefix $(DIR_SRCS)/conv/, $(CONV))
 
 PUT=	ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \

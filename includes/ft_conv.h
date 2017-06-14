@@ -15,6 +15,7 @@
 
 int					ft_atoi(const char *nptr);
 intmax_t			ft_atoimax(const char *nptr);
+uintmax_t			ft_atouimax(const char *nptr);
 char				*ft_itoa(int n);
 char				*ft_imaxtoa(intmax_t n);
 char				*ft_imaxtoa_sign(intmax_t n, char *sign);
