@@ -21,4 +21,5 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isint(char *str);
+int					ft_isuintmax(char *str);
 #endif
