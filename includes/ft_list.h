@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:35:29 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/20 22:50:09 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/21 18:07:29 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ void				ft_lstpushnew(t_list **alst, void *content,
 				size_t content_size);
 void			ft_lstremove(t_list **lst, void (*del)(void *, size_t),
 				int (*f)(void*,void*), void *param);
+void			ft_lstaddnewsimple(t_list **alst, void *content);
 #endif
