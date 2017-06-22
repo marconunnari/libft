@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/14 15:11:36 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/16 21:38:44 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/22 21:11:57 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ t_btree		*ft_btreenew(void *content, size_t content_size)
 	{
 		new->content = NULL;
 		new->content_size = 0;
+	}
+	else if (content_size == 0)
+	{
+		new->content = content;
 	}
 	else
 	{

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreeadd.c                                      :+:      :+:    :+:   */
+/*   ft_btree_apply_infixp.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/14 16:39:28 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/22 21:00:29 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/06/22 20:29:49 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/06/22 20:49:09 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_btreeadd(t_btree **root, t_btree *new,
-					int (*cmpf)(t_btree*, t_btree*))
+void	ft_btree_apply_infixp(t_btree *root, void (*applyf)(t_btree*, void*),
+		void *param)
 {
-	if (*root == NULL)
-		*root = new;
-	else if (cmpf(new, *root) < 0)
-		ft_btreeadd(&((*root)->left), new, cmpf);
-	else
-		ft_btreeadd(&((*root)->right), new, cmpf);
+	if (root)
+	{
+		ft_btree_apply_infixp(root->left, applyf, param);
+		applyf(root, param);
+		ft_btree_apply_infixp(root->right, applyf, param);
+	}
 }

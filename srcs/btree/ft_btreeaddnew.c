@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreeadd.c                                      :+:      :+:    :+:   */
+/*   ft_btreeaddnew.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/05/14 16:39:28 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/22 21:00:29 by mnunnari         ###   ########.fr       */
+/*   Created: 2017/06/22 20:38:05 by mnunnari          #+#    #+#             */
+/*   Updated: 2017/06/22 20:53:04 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_btreeadd(t_btree **root, t_btree *new,
+void	ft_btreeaddnew(t_btree **root, void *content, size_t content_size,
 					int (*cmpf)(t_btree*, t_btree*))
 {
-	if (*root == NULL)
-		*root = new;
-	else if (cmpf(new, *root) < 0)
-		ft_btreeadd(&((*root)->left), new, cmpf);
-	else
-		ft_btreeadd(&((*root)->right), new, cmpf);
+	t_btree		*new;
+
+	new = ft_btreenew(content, content_size);
+	ft_btreeadd(root, new, cmpf);
 }

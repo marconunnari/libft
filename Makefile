@@ -41,7 +41,8 @@ LST=	ft_lstadd.c ft_lstat.c ft_lstdel.c ft_lstdelone.c \
 SRCS += $(addprefix $(DIR_SRCS)/lst/, $(LST))
 
 BTREE=	ft_btree_apply_infix.c ft_btree_apply_prefix.c ft_btree_apply_suffix.c \
-		ft_btreeadd.c ft_btreedelone.c ft_btreenew.c
+		ft_btreeadd.c ft_btreedelone.c ft_btreenew.c ft_btreeaddnew.c \
+		ft_btree_apply_infixp.c
 SRCS += $(addprefix $(DIR_SRCS)/btree/, $(BTREE))
 
 PRINTF=	ft_conv_buox.c ft_conv_c.c ft_conv_d.c ft_conv_pc.c \
