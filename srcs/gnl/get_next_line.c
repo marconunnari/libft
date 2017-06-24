@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/21 17:51:47 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/29 14:04:01 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/24 21:03:45 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ t_remain		*find_remain(t_list *remains, int fd)
 
 int				get_next_line(const int fd, char **line)
 {
-	static t_list		*remains;
-	t_remain			*remain;
+	static t_list	*remains;
+	t_remain		*remain;
 	int				res;
 
 	if (fd < 0 || !line)

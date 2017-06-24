@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:36:06 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/05/31 20:41:24 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/24 20:57:33 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ void				ft_swap_ints(int *ptr1, int *ptr2);
 void				ft_quicksort(void **array, int left, int right,
 					int (*cmp)(const void *, const void *));
 void				ft_swap(void **array, int i, int j);
-size_t			ft_arrlen(void **arr);
+size_t				ft_arrlen(void **arr);
 void				ft_arrdel(void **arr);
 #endif

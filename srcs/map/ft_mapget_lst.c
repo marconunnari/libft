@@ -6,13 +6,13 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/06/09 09:37:47 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/09 11:17:07 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/06/24 21:03:25 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void			*ft_mapget_lst(t_list *lst, void *key, int (*equ)(void*,void*))
+void			*ft_mapget_lst(t_list *lst, void *key, int (*equ)(void*, void*))
 {
 	t_map	*map;
 
