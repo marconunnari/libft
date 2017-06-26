@@ -17,7 +17,8 @@ STR=	ft_contstr.c ft_strappend.c ft_strcat.c ft_strchr.c \
 		ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c \
 		ft_strprepend.c ft_strrchr.c ft_strremove.c ft_strreplace.c \
 		ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtolower.c \
-		ft_strtoupper.c ft_strtrim.c ft_tolower.c ft_toupper.c
+		ft_strtoupper.c ft_strtrim.c ft_tolower.c ft_toupper.c \
+		ft_strchrs.c
 SRCS += $(addprefix $(DIR_SRCS)/str/, $(STR))
 
 IS=		ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
