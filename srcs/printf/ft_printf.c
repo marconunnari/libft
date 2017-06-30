@@ -57,3 +57,16 @@ int				ft_printf(const char *format, ...)
 	res = g_res;
 	return (res);
 }
+
+void				ft_err(int exit_code, const char *format, ...)
+{
+	va_list		ap;
+
+	g_res = 0;
+	g_fd = 2;
+	va_start(ap, format);
+	do_print(format, ap);
+	va_end(ap);
+	if (exit_code != -1)
+		exit(exit_code);
+}

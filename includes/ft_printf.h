@@ -21,6 +21,7 @@ int				ft_printfnl(const char *restrict format, ...);
 int				ft_dprintf(int fd, const char *format, ...);
 
 void			ft_error(char *msg, int exit_code);
+void			ft_err(int exit_code, const char *format, ...);
 
 typedef struct	s_placeholder
 {
