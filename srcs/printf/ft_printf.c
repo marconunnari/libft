@@ -66,6 +66,7 @@ void				ft_err(int exit_code, const char *format, ...)
 	g_fd = 2;
 	va_start(ap, format);
 	do_print(format, ap);
+	ft_printf_putchar('\n');
 	va_end(ap);
 	if (exit_code != -1)
 		exit(exit_code);
