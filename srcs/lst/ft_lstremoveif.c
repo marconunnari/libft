@@ -19,6 +19,7 @@ static t_list	*ft_lstremoveif_rec(t_list *lst, void (*del)(void *, size_t),
 
 	if (!lst)
 		return (NULL);
+	lst->next = ft_lstremoveif_rec(lst->next, del, f, param);
 	if (f(lst->content, param))
 	{
 		tmp = lst->next;
@@ -27,7 +28,6 @@ static t_list	*ft_lstremoveif_rec(t_list *lst, void (*del)(void *, size_t),
 		free(lst);
 		return (tmp);
 	}
-	lst->next = ft_lstremoveif_rec(lst->next, del, f, param);
 	return (lst);
 }
 
