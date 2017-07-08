@@ -6,7 +6,7 @@
 /*   By: mnunnari <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/29 14:35:29 by mnunnari          #+#    #+#             */
-/*   Updated: 2017/06/24 20:56:51 by mnunnari         ###   ########.fr       */
+/*   Updated: 2017/07/08 20:21:51 by mnunnari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ t_list				*ft_lsttail(t_list *lst);
 t_list				*ft_lstat(t_list *lst, int i);
 void				ft_lstpushnew(t_list **alst, void *content,
 					size_t content_size);
-void				ft_lstremove(t_list **lst, void (*del)(void *, size_t),
+void				ft_lstremoveif(t_list **lst, void (*del)(void *, size_t),
 					int (*f)(void*, void*), void *param);
 #endif
